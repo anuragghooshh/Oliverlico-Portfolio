@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  --navHeight: 72px;
+  --horizontalSpace: 100px;
+  --verticalSpace: 40px;
+  --fontSize: medium;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav,
+footer {
+  height: var(--navHeight);
+  padding: 0 var(--horizontalSpace);
+  width: 100vw;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.9215686275), rgba(255, 255, 255, 0.8078431373));
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  top: 0;
+  justify-content: space-between;
+  box-shadow: 0 5px 20px rgba(183, 183, 183, 0.2941176471);
+}
+nav header h1 {
+  font-family: "Mynerve", cursive;
+  color: #000;
+}
+nav .social {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  bottom: 0;
+  box-shadow: 0 -5px 20px rgba(183, 183, 183, 0.2941176471);
+}
+footer p,
+footer a {
+  font-size: var(--fontSize);
+  font-family: "Source Code Pro", monospace;
+  color: #000;
+}
+
+#scrolltoTop {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  bottom: calc(var(--navHeight) + var(--verticalSpace));
+  right: var(--horizontalSpace);
+  background-color: #ffffff;
+  border-radius: 100%;
+  box-shadow: 0 5px 20px rgba(29, 29, 29, 0.3647058824);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#scrolltoTop:active {
+  transform: scale(0.9);
+}
+
+.gallery {
+  width: calc(100vw - var(--horizontalSpace) * 2);
+  padding: var(--verticalSpace) 0;
+  margin: var(--navHeight) 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2862745098);
+  border-radius: 2px;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 1s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    --horizontalSpace: 50px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .item {
+    width: calc(33.33% - 10px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    --navHeight: 64px;
+    --horizontalSpace: 20px;
+    --fontSize: small;
+    --verticalSpace:20px;
+  }
+  #scrolltoTop {
+    width: 35px;
+    height: 35px;
+  }
+  .gallery {
+    display: block;
+  }
+  .item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  nav header h1 {
+    font-size: small;
+  }
+  nav .social {
+    gap: 10px;
+  }
+  nav .social img {
+    width: 24px;
+    height: 24px;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.849);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: var(--horizontalSpace);
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .item:hover img {
+    transform: scale(1.25) rotate(5deg);
+    filter: brightness(1.2);
+    transition: 1s ease-in-out;
+    transition-delay: 300ms;
+  }
+}/*# sourceMappingURL=main.css.map */

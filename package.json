@@ -1,0 +1,17 @@
+{
+  "name": "lucio",
+  "version": "1.0.0",
+  "description": "Portfolio website of Lucio Silva.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucio Silva",
+  "license": "ISC",
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/masonry-layout": "^4.2.5"
+  }
+}
