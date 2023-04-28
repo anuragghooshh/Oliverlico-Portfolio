@@ -20,13 +20,13 @@ $font2 : 'Mynerve', cursive;
 
 body {
     --navHeight: 72px;
-    --horizontalSpace: 100px;
-    --verticalSpace: 40px;
+    --horizontalSpace: 70px;
+    --verticalSpace: calc(var(--navHeight) + 40px);
     --fontSize: medium;
+    // --itemWidth : calc((100vw - (var(--horizontalSpace)*2)))
 
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+    padding: var(--verticalSpace) var(--horizontalSpace);
 }
 
 nav,
@@ -57,8 +57,19 @@ nav {
     }
 
     .social {
+        --size : 24px;
         display: flex;
         gap: 20px;
+
+        a{
+            width: var(--size);
+            height: var(--size);
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }
 
@@ -82,7 +93,7 @@ footer {
     justify-content: center;
     position: fixed;
     z-index: 1000;
-    bottom: calc(var(--navHeight) + var(--verticalSpace));
+    bottom: var(--verticalSpace);
     right: var(--horizontalSpace);
     background-color:$light;
     border-radius: 100%;
@@ -95,13 +106,9 @@ footer {
 }
 
 .gallery {
-    width: calc(100vw - var(--horizontalSpace) * 2);
-    padding: var(--verticalSpace) 0;
-    margin: var(--navHeight) 0;
+    min-width: 100%;
+    width: 100%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    // background-color: #9b9b9b;
 }
 
 .item {
@@ -126,6 +133,9 @@ footer {
     body {
         --horizontalSpace: 50px;
     }
+    .social{
+        --size : 20px !important;
+    }
 
     .gallery {
         display: flex;
@@ -143,7 +153,9 @@ footer {
         --navHeight: 64px;
         --horizontalSpace: 20px;
         --fontSize: small;
-        --verticalSpace:20px;
+    }
+    .social{
+        --size : 20px !important;
     }
     #scrolltoTop{
         width: 35px;

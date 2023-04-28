@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Oliverlico">
+    <meta name="description" content="Oliverlico's Portfolio.">
     <link rel="stylesheet" href="./style/main.css" />
-    <link rel="icon" type="image/x-icon" href="./resources/favicon.svg">
-    <title>Lucio Silva</title>
-</head>
+    <link rel="icon" type="image/x-icon" href="./resources/favicon.svg" />
+    <title>Oliverlico</title>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <header>
-            <h1>OLIVERLICO</h1>
-        </header>
-        <div class="social">
-            <a href="https://www.behance.net/oliverlico" target="_blank" title="Opens in a new tab!"><img src="./resources/behance.svg" alt=""></a>
-            <a href="https://www.instagram.com/oliverlico/" target="_blank" title="Opens in a new tab!"><img src="./resources/Instagram.svg" alt=""></a>
-            <a href="https://twitter.com/oliverlico" target="_blank" title="Opens in a new tab!"><img src="./resources/Twitter.svg" alt=""></a>
-        </div>
+      <header>
+        <h1>OLIVERLICO</h1>
+      </header>
+      <div class="social">
+        <a
+          href="https://www.behance.net/oliverlico"
+          target="_blank"
+          title="Opens in a new tab!"
+          ><img src="./resources/behance.svg" alt=""
+        /></a>
+        <a
+          href="https://www.instagram.com/oliverlico/"
+          target="_blank"
+          title="Opens in a new tab!"
+          ><img src="./resources/Instagram.svg" alt=""
+        /></a>
+        <a
+          href="https://twitter.com/oliverlico"
+          target="_blank"
+          title="Opens in a new tab!"
+          ><img src="./resources/Twitter.svg" alt=""
+        /></a>
+      </div>
     </nav>
     <div id="scrolltoTop">&uparrow;</div>
-    <div class="gallery">
-        <div class="item" title="Click to View">
-            <img src="./resources/exampleImages/example 1.jpg" alt="Artwork 1">
-        </div>
-
-        <div class="item" title="Click to View">
-            <img src="./resources/exampleImages/example 2.jpg" alt="Artwork 1">
-        </div>
-    </div>
+    <div class="gallery"></div>
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-img" src="">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" src="" />
     </div>
     <footer>
-        <p>&copy; 2023, Oliverlico.</p>
-        <a href="mailto:oliverlico.art@gmail.com">oliverlico.art@gmail.com</a>
+      <p>&copy; 2023, Oliverlico.</p>
+      <a href="mailto:oliverlico.art@gmail.com">oliverlico.art@gmail.com</a>
     </footer>
-    <script type="text/javascript" src="./script/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="./script/main.js"></script>
-</body>
-
+    <script type="module" src="./script/masonry.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script type="module" src="./script/main.js"></script>
+    <script type="module" src="./script/seed.js"></script>
+  </body>
 </html>

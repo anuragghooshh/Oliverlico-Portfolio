@@ -9,6 +9,7 @@
   "author": "Oliverlico",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^9.20.0",
     "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
